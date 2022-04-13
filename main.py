@@ -8,10 +8,13 @@ class Alumno:
     nota = None
     def __init__(self):
         self.nombre = input("Introduzca su nombre: ") 
-        self.nota = input("Introduzca su calificación: ") 
+        self.nota = int(input("Introduzca su calificación: "))
         print ("El alumno",self.nombre, "ha obtenido un",self.nota, "en su calificación")
+        if self.nota >= 5:
+            print("El alumno ha aprobado")
+        else:
+            print ("El alumno ha suspendido")    
 
 al = Alumno()
 #print(dir(al))
 al.__init__
-
